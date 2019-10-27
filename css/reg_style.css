@@ -1,17 +1,13 @@
-html, body {
-	height: 100%;
-}
 
 body {
-	/*background-color: #006E4A;*/
-	background: linear-gradient(to bottom right, #00AA72, #207F60) no-repeat;
+	background: url('../images/backgroundLogon.jpg');
+	/* background: linear-gradient(to bottom right, #00AA72, #207F60) no-repeat; */
 	color: white;
 	/*Запрет выделения текста*/
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	user-select: none;
 	font-family: 'Lora', serif ; 
-	height: 100%;
 }
 
 a {
@@ -30,6 +26,7 @@ a {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-bottom: 120px;
 }
 
 .wrapper-header img {
@@ -43,25 +40,64 @@ a {
 	margin-left: 40px;
 }
 
-h1 {
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
 
 /*Основной контент
 ---------------------------------------------------------------------------------------*/
 
-.wrapper-main {
-	/*border: 1px solid orange;*/
-	height: auto;
-} 
-
-.wrapper-reg {
-	border: 1px solid yellow;
-	width: 450px;
-	height: 600px;
+.form-wrap {
+	min-width: 375px;
+	max-width: 550px;
+	/*background: linear-gradient(to bottom right, #1C64AF, #0B519B) no-repeat;*/
+	/*background: linear-gradient(to bottom right, #00AA72, #207F60) no-repeat;*/
+	border: 1px solid white;
+	border-radius: 20px;
 	margin: 0 auto;
+	padding-top: 10px;
+}
+
+h1 {
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+
+form {
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	border-width: 0;
+	outline: none;
+	width: 300px;
+	padding: 10px 15px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: white;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+	/*box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);*/
+	box-shadow: inset 0 0 0 2px rgba(28,100,175,0.5);
+}
+
+button {
+	height: 36px;
+	border-width: 0;
+	display: block;
+	width: 200px;
+	background: white;
+	color: gray;
+	font-size: 14px;
+	outline: none;
+	text-transform: uppercase;
+	border-radius: 8px;
+	margin-bottom: 50px;
+	float: right;
+	position: relative;
 }

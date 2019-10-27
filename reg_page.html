@@ -11,7 +11,7 @@
 	<header>
 		<div class="wrapper-header">
 			<!--<img src="images/logo.png">-->
-			<p class="logo">ONLINE <br> DIARY</p>
+			<a href="index.html"><p class="logo">ONLINE <br> DIARY</p></a>
 			<nav>
 				<ul>
 					<li><a href="#">Вход</a></li>
@@ -21,9 +21,17 @@
 		</div>
 	</header>
 	<main>
-		<div class="wrapper-main">
-			<div class="wrapper-reg">
-			</div>
+		<div class="form-wrap">
+			<h1>Регистрация</h1>
+			<form method="post">
+				<div class="input-wrap">
+					<input type="text" placeholder="Введите имя" required><br>
+					<input type="email" placeholder="Введите адрес" required><br>
+					<input type="password" placeholder="Введите пароль" required><br>
+					<input type="password" placeholder="Повторите пароль" required><br>
+					<button type="submit">Отправить</button>
+				</div>
+			</form>
 		</div>
 	</main>
 </body>
