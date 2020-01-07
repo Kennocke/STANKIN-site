@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/diary_style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static 'scripts/diary_page.js'%}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Регистрация</title>
+</head>
+<body>
+	<header>
+		<div class="wrapper-header">
+			<!--<img src="images/logo.png">-->
+			<a href="{% url 'home' %}"><p class="logo">ONLINE <br> DIARY</p></a>
+			<nav>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="side-menu">
+			<h2 class="side-menu-title">Список записей</h2>
+			<dl class="holiday">
+				{% for record in records %}
+			  <dt>{{record.created_date| date:"m.d.y"}}</dt>
+			    <dd id="{{ record.id }}" name="note">{{record.title}}{% csrf_token %}</dd>
+				{% endfor %}
+					<dd name="note">Создать новую запись</dd>
+			</dl>
+		</div>
+		<div class="form-wrap-position">
+			<div class="form-wrap">
+				<h1>Введите текст</h1>
+				<form method="post"> {% csrf_token %}
+					<div class="input-wrap">
+	            	<input type="date" name="created_date" placeholder="Введите дату" value="{{ current_date }}" readonly><br>
+	            	<input type="text" name="title" placeholder="Введите заголовок" value="{{ one_record }}" required><br>
+					  		<p><textarea name="main_text" placeholder="Введите текст"></textarea></p>
+						<button class="create_btn" id="create_btn" type="submit">Создать</button> <button>Обновить</button>
+					</div>
+			</form>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

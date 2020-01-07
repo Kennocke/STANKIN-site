@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reg_style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Регистрация</title>
+</head>
+<body>
+	<header>
+		<div class="wrapper-header">
+			<!--<img src="images/logo.png">-->
+			<a href="{% url 'home' %}"><p class="logo">ONLINE <br> DIARY</p></a>
+			<nav>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="form-wrap">
+			<h1>Регистрация</h1>
+			<form method="post">
+				<div class="input-wrap">
+					<input type="text" placeholder="Введите имя" required><br>
+					<input type="email" placeholder="Введите адрес" required><br>
+					<input type="password" placeholder="Введите пароль" required><br>
+					<input type="password" placeholder="Повторите пароль" required><br>
+					<button type="submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</main>
+</body>
+</html>

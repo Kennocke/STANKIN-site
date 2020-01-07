@@ -1,0 +1,102 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<meta name="viewport" css="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8" />
+	<title>Дневник онлайн</title>
+</head>
+<body>
+	<header>
+		<div class="wrapper-header-full">
+			<div class="wrapper-header">
+				<a href="{% url 'home' %}"><p class="logo">ONLINE <br> DIARY</p></a>
+				<nav>
+					<ul>
+						<li>
+							<p class="dropdown">Вход</p>
+						</li>
+						<li><a href="{% url 'reg' %}">Регистрация</a></li>
+					</ul>
+					  <div class="dropdown-css">
+					  	<form>
+							<input type="text" placeholder="Введите имя" required><br>
+							<input type="password" placeholder="Введите пароль" required><br>
+							<button type="submit">Войти</button>
+						</form>
+  					  </div>
+				</nav>
+			</div>
+			<H1>Маленький сервис с большими <br> возможностями</H1>
+
+			<div class="create-diary-button" onClick='location.href="{% url 'diary' %}"'>Создать дневник</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="wrapper-main">
+			<div class="wrapper-main-block1">
+				<img src="{% static 'images/first_img.jpg' %}">
+				<div class="wrapper-main-first-text">
+					<h2>Первый заголовок</h2>
+					<p>
+						Товарищи! консультация с широким активом в значительной степени
+						обуславливает создание модели развития. Таким образом сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение модели развития.
+					</p>
+				</div>
+			</div>
+
+			<div class="wrapper-main-block2">
+				<div class="wrapper-main-second-text">
+					<h2>Второй заголовок</h2>
+					<p>
+						Товарищи! консультация с широким активом в значительной степени
+						обуславливает создание модели развития. Таким образом сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение модели развития.
+					</p>
+				</div>
+				<img src="{% static 'images/second_img.jpg' %}">
+			</div>
+
+			<div class="wrapper-main-block3">
+				<img src="{% static 'images/third_img.jpg' %}">
+				<div class="wrapper-main-third-text">
+					<h2>Третий заголовок</h2>
+					<p>
+						Товарищи! консультация с широким активом в значительной степени
+						обуславливает создание модели развития. Таким образом сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение модели развития.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrapper-footer">
+			<p class="logo">ONLINE <br> DIARY</p>
+			<p>© Витковский С. Е., 2015-2019 Все права защищены. Перепечатка и цитирование материалов запрещены.</p>
+			<p>По всем вопросам diary@google.com</p>
+<!--
+<div class="footer-left">
+	<ul>
+		<li>Здесь</li>
+		<li>Будет</li>
+		<li>Какой-то</li>
+		<li>+7-999-689-74-65</li>
+	</ul>
+</div>
+<div class="footer-right">
+	<ul>
+		<li>Здесь</li>
+		<li>Будет</li>
+		<li>Какой-то</li>
+		<li>+7-999-689-74-65</li>
+	</ul>
+</div> -->
+		</div>
+	</footer>
+</body>
+</html>
